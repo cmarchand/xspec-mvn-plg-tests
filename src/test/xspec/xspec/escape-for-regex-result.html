@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Test Report for home/ext-cmarchand/devel/github/tests-xspec/src/main/xsl/escape-for-regex.xslt (5/0/1/6)</title>
+      <link rel="stylesheet" type="text/css" href="file:/home/ext-cmarchand/devel/github/xspec/src/reporter/test-report.css" />
+   </head>
+   <body>
+      <h1>Test Report</h1>
+      <p>Stylesheet: <a href="file:/home/ext-cmarchand/devel/github/tests-xspec/src/main/xsl/escape-for-regex.xslt">home/ext-cmarchand/devel/github/tests-xspec/src/main/xsl/escape-for-regex.xslt</a></p>
+      <p>Tested: 14 November 2017 at 17:58</p>
+      <h2>Contents</h2>
+      <table class="xspec">
+         <col width="85%" />
+         <col width="15%" />
+         <thead>
+            <tr>
+               <th style="text-align: right; font-weight: normal; ">passed/pending/failed/total</th>
+               <th>5/0/1/6</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="successful">
+               <th><a href="#d3e4">No escaping</a></th>
+               <th>1/0/0/1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d3e25">Test simple patterns</a></th>
+               <th>3/0/0/3</th>
+            </tr>
+            <tr class="failed">
+               <th><a href="#d3e81">When processing a list of phrases</a></th>
+               <th>1/0/1/2</th>
+            </tr>
+         </tbody>
+      </table>
+      <div id="d3e4">
+         <h2 class="successful">No escaping<span class="scenario-totals">1/0/0/1</span></h2>
+         <table class="xspec" id="t-d3e4">
+            <col width="85%" />
+            <col width="15%" />
+            <tbody>
+               <tr class="successful">
+                  <th>No escaping</th>
+                  <th>1/0/0/1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Must not be escaped at all</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="d3e25">
+         <h2 class="successful">Test simple patterns<span class="scenario-totals">3/0/0/3</span></h2>
+         <table class="xspec" id="t-d3e25">
+            <col width="85%" />
+            <col width="15%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Test simple patterns</th>
+                  <th>3/0/0/3</th>
+               </tr>
+               <tr class="successful">
+                  <th>When encountering parentheses</th>
+                  <th>1/0/0/1</th>
+               </tr>
+               <tr class="successful">
+                  <td>escape them.</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>When encountering a whitespace character class</th>
+                  <th>2/0/0/2</th>
+               </tr>
+               <tr class="successful">
+                  <td>escape the backslash</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <td>result should have one more character than source</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="d3e81">
+         <h2 class="failed">When processing a list of phrases<span class="scenario-totals">1/0/1/2</span></h2>
+         <table class="xspec" id="t-d3e81">
+            <col width="85%" />
+            <col width="15%" />
+            <tbody>
+               <tr class="failed">
+                  <th>When processing a list of phrases</th>
+                  <th>1/0/1/2</th>
+               </tr>
+               <tr class="successful">
+                  <td>All phrase elements should remain</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="failed">
+                  <td><a href="#d3e124">Strings should be escaped and status attributes should be added</a></td>
+                  <td>Failure</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="d3e81">When processing a list of phrases</h3>
+         <h4 id="d3e124">Strings should be escaped and status attributes should be added</h4>
+         <table class="xspecResult">
+            <thead>
+               <tr>
+                  <th>Result</th>
+                  <th>Expected Result</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><pre>&lt;<span class="diff">phrases</span> xmlns:functx="http://www.functx.com"&gt;
+   &lt;<span class="diff">phrase</span> <span class="diff">status</span>="changed"&gt;<span class="same">Hello!</span>&lt;/phrase&gt;
+   &lt;<span class="diff">phrase</span> <span class="diff">status</span>="changed"&gt;<span class="same">Goodbye!</span>&lt;/phrase&gt;
+   &lt;<span class="diff">phrase</span> <span class="diff">status</span>="same"&gt;<span class="same">\(So long!\)</span>&lt;/phrase&gt;
+&lt;/phrases&gt;</pre></td>
+                  <td><pre>&lt;<span class="diff">phrases</span> xmlns:functx="http://www.functx.com"&gt;
+   &lt;<span class="diff">phrase</span> <span class="diff">status</span>="same"&gt;<span class="same">Hello!</span>&lt;/phrase&gt;
+   &lt;<span class="diff">phrase</span> <span class="diff">status</span>="same"&gt;<span class="same">Goodbye!</span>&lt;/phrase&gt;
+   &lt;<span class="diff">phrase</span> <span class="diff">status</span>="changed"&gt;<span class="same">\(So long!\)</span>&lt;/phrase&gt;
+&lt;/phrases&gt;</pre></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>
