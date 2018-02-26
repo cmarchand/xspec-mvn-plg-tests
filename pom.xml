@@ -81,14 +81,15 @@
                     <dependency>
                         <groupId>net.sf.saxon</groupId>
                         <artifactId>Saxon-HE</artifactId>
-                        <version>9.7.0-13</version>
+                        <version>9.8.0-8</version>
                     </dependency>
                 </dependencies>
                 <configuration>
                     <generateSurefireReport>true</generateSurefireReport>
                     <keepGeneratedCatalog>true</keepGeneratedCatalog>
                     <excludes>
-                      <exclude>demo-01.xspec</exclude>
+                      <exclude>escape-for-regex.xspec</exclude>
+                      <!-- exclude>demo-01.xspec</exclude -->
                       <exclude>xquery-tutorial.xspec</exclude>
                     </excludes>
                 </configuration>
