@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description 
+    xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+    xmlns:functx="http://www.functx.com" 
+    stylesheet="../../main/xsl/escape-for-regex.xslt">
+  
+  <x:import href="escape-for-regex.include.xspec"/>
+  
+</x:description>
