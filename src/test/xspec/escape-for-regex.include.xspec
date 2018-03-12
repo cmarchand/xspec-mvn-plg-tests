@@ -4,6 +4,6 @@
     xmlns:functx="http://www.functx.com" 
     stylesheet="../../main/xsl/escape-for-regex.xslt">
   
-  <x:import href="escape-for-regex.include.xspec"/>
+  <x:import href="escape-for-regex.xspec"/>
   
 </x:description>
