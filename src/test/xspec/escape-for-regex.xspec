@@ -56,7 +56,7 @@
   <!--
        This scenario demonstrates how to test a matching template.
    -->
-  <x:scenario label="When processing a list of phrases">
+  <x:scenario label="When processing a list of phrases" pending="coverage">
     <!-- apply template rules to this element -->
     <x:context>
       <phrases>
