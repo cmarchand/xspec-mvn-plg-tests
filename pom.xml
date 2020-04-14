@@ -108,7 +108,7 @@
                       <exclude>**/demo-01.xspec</exclude>
                       <exclude>**/xquery-tutorial.xspec</exclude>
                     </excludes>
-                    <generateCoverage>true</generateCoverage>
+                    <coverage>true</coverage>
                 </configuration>
                 <executions>
                     <execution>
